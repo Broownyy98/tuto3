@@ -50,7 +50,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/email_box"
+        android:id="@+id/name_box"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginStart="50dp"
@@ -62,7 +62,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/password_box"
+        android:id="@+id/valid_email"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginStart="50dp"
@@ -79,8 +79,8 @@
         android:layout_height="24dp"
         android:layout_marginStart="258dp"
         android:layout_marginTop="13dp"
-        app:layout_constraintStart_toStartOf="@+id/email_box"
-        app:layout_constraintTop_toTopOf="@+id/email_box"
+        app:layout_constraintStart_toStartOf="@+id/name_box"
+        app:layout_constraintTop_toTopOf="@+id/name_box"
         app:srcCompat="@drawable/mail" />
 
     <ImageView
@@ -89,8 +89,8 @@
         android:layout_height="24dp"
         android:layout_marginStart="258dp"
         android:layout_marginTop="13dp"
-        app:layout_constraintStart_toStartOf="@+id/password_box"
-        app:layout_constraintTop_toTopOf="@+id/password_box"
+        app:layout_constraintStart_toStartOf="@+id/valid_email"
+        app:layout_constraintTop_toTopOf="@+id/valid_email"
         app:srcCompat="@drawable/lock" />
 
     <TextView
@@ -116,7 +116,7 @@
         android:layout_marginStart="48dp"
         android:layout_marginTop="448dp"
         android:bufferType="normal"
-        android:buttonTint="#BAADAD"
+        android:buttonTint="#CBCBCB"
         android:fontFamily="sans-serif-black"
         android:lineHeight="10.35sp"
         android:text="Remember me"
