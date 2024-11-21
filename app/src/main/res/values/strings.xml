@@ -1,4 +1,18 @@
 <resources>
     <string name="app_name">tuto3</string>
-
+    <string name="Welcome">Welcome back</string>
+    <string name="sign_in">sign in to access your account</string>
+    <string name="email">Enter your email</string>
+    <string name="password">Password</string>
+    <string name="Forget_pw">Forget password ?</string>
+    <string name="Remember">Remember me</string>
+    <string name="Next">Next  ></string>
+    <string name="Register">Register now</string>
+    <string name="New">New Member?"</string>
+    <string name="Checkbox">By checking the box you agree to our Terms and Conditions.</string>
+    <string name="log_in">Log in"></string>
+    <string name="already_member">Already a member? </string>
+    <string name="Strong_pw">Strong Password</string>
+    <string name="Valid_email">Valid email</string>
+    <string name="Full_name">Full name</string>
 </resources>

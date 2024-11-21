@@ -42,7 +42,7 @@
         android:layout_marginTop="213dp"
         android:fontFamily="sans-serif-light"
         android:lineHeight="17.07dp"
-        android:text="sign in to access your account"
+        android:text="@string/sign_in"
         android:textColorLink="#252525"
         android:textFontWeight="300"
         android:textSize="14dp"
@@ -55,7 +55,7 @@
         android:layout_height="50dp"
         android:layout_marginTop="312dp"
         android:ems="10"
-        android:hint="Full name"
+        android:hint="@string/Full_name"
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -66,7 +66,7 @@
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:ems="10"
-        android:hint="Valid email"
+        android:hint="@string/Valid_email"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
@@ -89,7 +89,7 @@
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:ems="10"
-        android:hint="Strong Password"
+        android:hint="@string/Strong_pw"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -120,7 +120,7 @@
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginTop="712dp"
-        android:text="Next  >"
+        android:text="@string/Next"
         android:textSize="16sp"
         app:cornerRadius="8dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -144,12 +144,13 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Already a member? " />
+            android:text="@string/already_member" />
 
         <TextView
+            android:id="@+id/log_in"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Log In"
+            android:text="@string/log_in"
             android:textColor="#6C63FF" />
     </LinearLayout>
 
@@ -176,12 +177,13 @@
     <CheckBox
         android:id="@+id/checkBox2"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="10dp"
         android:buttonTint="#CBCBCB"
         android:scrollbarSize="4dp"
-        android:text="By checking the box you agree to our Terms and Conditions."
+        android:text="@string/Checkbox"
         android:textSize="10sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.528"
