@@ -25,7 +25,7 @@
         android:layout_marginStart="80dp"
         android:layout_marginTop="180dp"
         android:fontFamily="sans-serif-medium"
-        android:text="Welcome back"
+        android:text="@string/Welcome"
         android:textColorLink="#252525"
         android:textFontWeight="500"
         android:textSize="24sp"
@@ -45,7 +45,7 @@
         android:text="@string/sign_in"
         android:textColorLink="#252525"
         android:textFontWeight="300"
-        android:textSize="14dp"
+        android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -61,58 +61,24 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/valid_email"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:ems="10"
-        android:hint="@string/Valid_email"
-        android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="382dp" />
-
-    <EditText
-        android:id="@+id/phone_number"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:ems="10"
-        android:hint="Phone number"
-        android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="452dp" />
-
-    <EditText
-        android:id="@+id/new_password"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:ems="10"
-        android:hint="@string/Strong_pw"
-        android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="522dp" />
-
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="24dp"
         android:layout_height="24dp"
-        android:layout_marginStart="258dp"
-        android:layout_marginTop="13dp"
-        app:layout_constraintStart_toStartOf="@+id/valid_email"
-        app:layout_constraintTop_toTopOf="@+id/valid_email"
+        android:layout_marginStart="256dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextEmailAddress"
+        app:layout_constraintTop_toTopOf="@+id/editTextTextEmailAddress"
         app:srcCompat="@drawable/mail" />
 
     <ImageView
         android:id="@+id/imageView6"
         android:layout_width="24dp"
         android:layout_height="24dp"
-        android:layout_marginStart="258dp"
-        android:layout_marginTop="13dp"
-        app:layout_constraintStart_toStartOf="@+id/new_password"
-        app:layout_constraintTop_toTopOf="@+id/new_password"
+        android:layout_marginStart="256dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextPassword"
+        app:layout_constraintTop_toTopOf="@+id/editTextTextPassword"
         app:srcCompat="@drawable/lock" />
 
     <Button
@@ -168,10 +134,10 @@
         android:id="@+id/imageView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="258dp"
-        android:layout_marginTop="13dp"
-        app:layout_constraintStart_toStartOf="@+id/phone_number"
-        app:layout_constraintTop_toTopOf="@+id/phone_number"
+        android:layout_marginStart="256dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/editTextPhone"
+        app:layout_constraintTop_toTopOf="@+id/editTextPhone"
         app:srcCompat="@drawable/smartphone" />
 
     <CheckBox
@@ -179,7 +145,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="588dp"
         android:layout_marginEnd="10dp"
         android:buttonTint="#CBCBCB"
         android:scrollbarSize="4dp"
@@ -188,7 +154,46 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.528"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/new_password" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextTextEmailAddress"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="384dp"
+        android:ems="10"
+        android:hint="Valid email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextPhone"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="452dp"
+        android:ems="10"
+        android:hint="Phone number"
+        android:inputType="phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextTextPassword"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="520dp"
+        android:ems="10"
+        android:hint="Strong Password"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
