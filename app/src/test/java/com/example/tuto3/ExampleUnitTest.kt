@@ -11,7 +11,10 @@ import org.junit.Assert.*
  */
 class ExampleUnitTest {
     @Test
-    fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
+    fun givenEmptyEmail_thenReturnFalse() {
+        val credentialsManager = ExampleUnitTest()
+        val isEmailValid = credentialsManager.isEmailValid("")
+        assertEquals(false, isEmailValid)
+
     }
 }
