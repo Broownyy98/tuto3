@@ -1,54 +1,42 @@
 // Put your package name here. Check your activity for reference.
 package com.example.tuto3
 
-import junit.framework.TestCase.assertEquals
+import junit.framework.TestCase.assertTrue
+import org.junit.Assert
 import org.junit.Test
 
 
 class CredentialsManagerTest {
-
-    // Test empty email
     @Test
-    fun givenWrongEmailFormat_thenReturnFalse() {
+    fun givenEmptyEmail_thenReturnFalse() {
         val credentialsManager = CredentialsManager()
-
-        val isEmailValid = credentialsManager.isEmailValid("invalid-email")
-
-        assertEquals(false, isEmailValid)
+        val isEmailValid = credentialsManager.isEmailValid("")
+        Assert.assertEquals(false, isEmailValid)
     }
 
     @Test
     fun givenProperEmail_thenReturnTrue() {
         val credentialsManager = CredentialsManager()
+        val isEmailValid = credentialsManager.isEmailValid("email@example.com")
+        Assert.assertEquals(true, isEmailValid)
+    }
 
-        val isEmailValid = credentialsManager.isEmailValid("user@example.com")
-
-        assertEquals(true, isEmailValid)
+    @Test
+    fun givenWrongEmailFormat_thenReturnFalse() {
+        val credentialsManager = CredentialsManager()
+        val isEmailValid = credentialsManager.isEmailValid("email@.st")
+        Assert.assertEquals(false, isEmailValid)
     }
 
     @Test
     fun givenEmptyPassword_thenReturnFalse() {
         val credentialsManager = CredentialsManager()
-
-        val isPasswordValid = credentialsManager.isPasswordValid("")
-
-        assertEquals(false, isPasswordValid)
+        Assert.assertEquals(false, credentialsManager.isPasswordValid(""))
     }
 
     @Test
-    fun givenFilledPassword_thenReturnTrue() {
+    fun givenValidPassword_thenReturnTrue() {
         val credentialsManager = CredentialsManager()
-
-        val isPasswordValid = credentialsManager.isPasswordValid("password123")
-
-        assertEquals(true, isPasswordValid)
+        Assert.assertEquals(true, credentialsManager.isPasswordValid("StrongP@ssw0rd"))
     }
-
-
-
-    // Test wrong email format
-    // Test proper email
-
-    // Test empty password
-    // Test filled password
 }
