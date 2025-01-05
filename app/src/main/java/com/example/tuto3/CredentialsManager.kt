@@ -9,7 +9,7 @@ class CredentialsManager {
     }
 
     fun isPasswordValid(password: String): Boolean {
-        val passwordPattern = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[!@#\$%^&*()_+\\-=\\[\\]{};':\"|,.<>/?]).{8,}$"
+        val passwordPattern = "^\\d{4,}$"
         return Regex(passwordPattern).matches(password)
     }
 }
