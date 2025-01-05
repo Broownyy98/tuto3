@@ -16,6 +16,9 @@
             android:name=".NewActivity"
             android:exported="false" />
         <activity
+            android:name=".FragmentAB"
+            android:exported="true" />
+        <activity
             android:name=".CredentialsManager"
             android:exported="false"
             android:theme="@style/Theme.Tuto3" />
