@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">tuto3</string>
     <string name="Welcome">Welcome back</string>
+    <string name="started">Get started</string>
     <string name="sign_in">sign in to access your account</string>
+    <string name="creating">by creating a free account</string>
     <string name="email">Enter your email</string>
     <string name="password">password</string>
     <string name="Forget_pw">Forget password ?</string>
@@ -15,7 +17,6 @@
     <string name="Strong_pw">Strong Password</string>
     <string name="Valid_email">Valid email</string>
     <string name="Full_name">Full name</string>
-    <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
@@ -57,4 +58,5 @@
         libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
+    <string name="phone_number">Phone number</string>
 </resources>

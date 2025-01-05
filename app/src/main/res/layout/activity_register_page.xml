@@ -5,89 +5,104 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#638FB4"
     tools:context=".Register_page">
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="321dp"
-        android:layout_height="251dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="42dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/undraw_adventure_map_hnin_2" />
+        app:srcCompat="@drawable/undraw_adventure_map_hnin_2"
+        style="@style/welcome_pic_style" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="182dp"
-        android:layout_height="29dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="180dp"
-        android:fontFamily="sans-serif-medium"
-        android:text="@string/Welcome"
-        android:textColorLink="#252525"
-        android:textFontWeight="500"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:visibility="visible"
+        style="@style/welcome_style"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="184dp"
+        android:text="@string/started"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="207dp"
-        android:layout_height="17dp"
-        android:layout_marginStart="78dp"
-        android:layout_marginTop="213dp"
-        android:fontFamily="sans-serif-light"
-        android:lineHeight="17.07dp"
-        android:text="@string/sign_in"
-        android:textColorLink="#252525"
-        android:textFontWeight="300"
-        android:textSize="14sp"
+        android:text="@string/creating"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/textview2style" />
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/name_box"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="312dp"
-        android:ems="10"
+        style="@style/InputFieldStyle"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="256dp"
+        app:endIconDrawable="@drawable/user"
+        app:endIconMode="custom"
         android:hint="@string/Full_name"
-        android:inputType="textEmailAddress"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:layout_marginStart="256dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextEmailAddress"
-        app:layout_constraintTop_toTopOf="@+id/editTextTextEmailAddress"
-        app:srcCompat="@drawable/mail" />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/editTextTextEmailAddress"
+        style="@style/InputFieldStyle"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="325dp"
+        android:hint="@string/Valid_email"
+        app:endIconDrawable="@drawable/mail"
+        app:endIconMode="custom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name_box">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:layout_marginStart="256dp"
-        android:layout_marginTop="12dp"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPassword"
-        app:layout_constraintTop_toTopOf="@+id/editTextTextPassword"
-        app:srcCompat="@drawable/lock" />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/editTextPhone"
+        style="@style/InputFieldStyle"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="394dp"
+        android:hint="@string/phone_number"
+        app:endIconDrawable="@drawable/smartphone"
+        app:endIconMode="custom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextTextEmailAddress">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/editTextTextPassword"
+        style="@style/InputFieldStyle"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="463dp"
+        android:hint="@string/Strong_pw"
+        app:endIconDrawable="@drawable/lock"
+        app:endIconMode="custom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextPhone">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/next_btn"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="712dp"
+        style="@style/nextbuttonstyle"
+        android:layout_marginTop="640dp"
         android:text="@string/Next"
-        android:textSize="16sp"
         app:cornerRadius="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
@@ -95,17 +110,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="@+id/next_btn"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/next_btn"
         app:layout_constraintTop_toBottomOf="@+id/next_btn"
-        android:textAlignment="center"
-        android:gravity="center"
-        android:foregroundGravity="center">
+        style="@style/Linearlayoutstyle">
 
         <TextView
             android:layout_width="wrap_content"
@@ -120,80 +129,15 @@
             android:textColor="#6C63FF" />
     </LinearLayout>
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:layout_marginStart="258dp"
-        android:layout_marginTop="13dp"
-        app:layout_constraintStart_toStartOf="@+id/name_box"
-        app:layout_constraintTop_toTopOf="@+id/name_box"
-        app:srcCompat="@drawable/user" />
-
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="256dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="@+id/editTextPhone"
-        app:layout_constraintTop_toTopOf="@+id/editTextPhone"
-        app:srcCompat="@drawable/smartphone" />
 
     <CheckBox
         android:id="@+id/checkBox2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="588dp"
-        android:layout_marginEnd="10dp"
-        android:buttonTint="#CBCBCB"
-        android:scrollbarSize="4dp"
         android:text="@string/Checkbox"
-        android:textSize="10sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.528"
+        app:layout_constraintHorizontal_bias="0.229"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/editTextTextEmailAddress"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="384dp"
-        android:ems="10"
-        android:hint="Valid email"
-        android:inputType="textEmailAddress"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/editTextPhone"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="452dp"
-        android:ems="10"
-        android:hint="Phone number"
-        android:inputType="phone"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/editTextTextPassword"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="520dp"
-        android:ems="10"
-        android:hint="Strong Password"
-        android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/checkBoxstyle" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
