@@ -51,7 +51,7 @@
         style="@style/InputFieldStyle"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
-        android:layout_marginTop="325dp"
+        android:layout_marginTop="330dp"
         android:hint="@string/Valid_email"
         app:endIconDrawable="@drawable/mail"
         app:endIconMode="custom"
@@ -68,7 +68,7 @@
         style="@style/InputFieldStyle"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
-        android:layout_marginTop="394dp"
+        android:layout_marginTop="404dp"
         android:hint="@string/phone_number"
         app:endIconDrawable="@drawable/smartphone"
         app:endIconMode="custom"
@@ -85,17 +85,18 @@
         style="@style/InputFieldStyle"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
-        android:layout_marginTop="463dp"
+        android:layout_marginTop="478dp"
         android:hint="@string/Strong_pw"
         app:endIconDrawable="@drawable/lock"
         app:endIconMode="custom"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintTop_toBottomOf="@id/editTextPhone">
+
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPassword"/>
+            android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
@@ -132,12 +133,13 @@
 
     <CheckBox
         android:id="@+id/checkBox2"
+        style="@style/checkBoxstyle"
+        android:layout_marginTop="580dp"
         android:text="@string/Checkbox"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.229"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        style="@style/checkBoxstyle" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
