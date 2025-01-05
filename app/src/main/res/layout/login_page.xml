@@ -5,160 +5,103 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#7AC2DC"
     tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="321dp"
-        android:layout_height="251dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="42dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/undraw_adventure_map_hnin_2" />
+        app:srcCompat="@drawable/undraw_adventure_map_hnin_2"
+        style="@style/welcomestyle" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="182dp"
-        android:layout_height="29dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="180dp"
-        android:fontFamily="sans-serif-medium"
         android:text="@string/Welcome"
-        android:textColorLink="#252525"
-        android:textFontWeight="500"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/welcomesignaturestyle" />
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="207dp"
-        android:layout_height="17dp"
-        android:layout_marginStart="78dp"
-        android:layout_marginTop="213dp"
-        android:fontFamily="sans-serif-light"
-        android:lineHeight="17.07dp"
         android:text="@string/sign_in"
-        android:textColorLink="#252525"
-        android:textFontWeight="300"
-        android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/signinstyle" />
 
-    <EditText
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/name_box"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="50dp"
+        style="@style/InputFieldStyle"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
         android:layout_marginTop="325dp"
-        android:ems="10"
         android:hint="@string/email"
-        android:inputType="textEmailAddress"
+        app:endIconDrawable="@drawable/mail"
+        app:endIconMode="custom"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <EditText
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/valid_email"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="50dp"
+        style="@style/InputFieldStyle"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
         android:layout_marginTop="400dp"
-        android:ems="10"
         android:hint="@string/password"
-        android:inputType="textPassword"
+        app:endIconDrawable="@drawable/lock"
+        app:endIconMode="custom"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_box"
 
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:layout_marginStart="258dp"
-        android:layout_marginTop="13dp"
-        app:layout_constraintStart_toStartOf="@+id/name_box"
-        app:layout_constraintTop_toTopOf="@+id/name_box"
-        app:srcCompat="@drawable/mail" />
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"/>
 
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:layout_marginStart="258dp"
-        android:layout_marginTop="13dp"
-        app:layout_constraintStart_toStartOf="@+id/valid_email"
-        app:layout_constraintTop_toTopOf="@+id/valid_email"
-        app:srcCompat="@drawable/lock" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:id="@+id/forget_pw"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="250dp"
-        android:layout_marginTop="467dp"
-        android:fontFamily="sans-serif"
-        android:lineHeight="10.35dp"
         android:text="@string/Forget_pw"
-        android:textColor="#6C63FF"
-        android:textFontWeight="400"
-        android:textSize="9dp"
-        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/forget_style" />
 
     <CheckBox
         android:id="@+id/checkBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="448dp"
         android:bufferType="normal"
-        android:buttonTint="#CBCBCB"
-        android:fontFamily="sans-serif-black"
-        android:lineHeight="10.35sp"
         android:text="@string/Remember"
-        android:textColor="#252525"
-        android:textFontWeight="400"
-        android:textSize="9sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/checkBox_style" />
 
     <Button
         android:id="@+id/next_btn"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="568dp"
         android:text="@string/Next"
-        android:textSize="16sp"
         app:cornerRadius="8dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/NextBtn_style" />
 
     <TextView
         android:id="@+id/register_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="640dp"
         android:text="@string/Register"
-        android:textColor="#6C63FF"
-        android:textSize="13dp"
-        android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/textView5"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/register_style" />
 
     <TextView
         android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="112dp"
-        android:layout_marginTop="640dp"
         android:text="@string/New"
-        android:textSize="13dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/newMember_style" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
