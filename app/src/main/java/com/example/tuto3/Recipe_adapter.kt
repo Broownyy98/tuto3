@@ -14,7 +14,8 @@ import androidx.recyclerview.widget.RecyclerView
 
 class Recipe_adapter(
     private val context: Context,
-    private val recipes: List<Recipe>
+    private var recipes: List<Recipe>
+    
 ) : RecyclerView.Adapter<Recipe_adapter.RecipeViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecipeViewHolder {
@@ -38,6 +39,13 @@ class Recipe_adapter(
 
         holder.like.setOnClickListener {
             Toast.makeText(context, "Liked ${recipe.name}", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    fun updateRecipes(newRecipes: List<Recipe>) {
+        if (newRecipes != recipes) {
+            recipes = newRecipes
+            notifyDataSetChanged()
         }
     }
 
